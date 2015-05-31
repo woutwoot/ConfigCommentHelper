@@ -17,7 +17,7 @@ public class TestCCH {
     public void testAddComment(){
         CCH cch = new CCH(file);
         cch.readFile();
-        assertTrue(cch.addComment("inventory.misc", "Contains all sorts of settings concerning the shop menu (inventory)"));
+        assertTrue(cch.addComment("inventory.misc", "Contains all sorts of settings concerning the shop menu (inventory)", "Also, just for testing, this is a new line."));
         assertTrue(cch.addComment("inventory.misc.disabledIconMaterial", "Change this to change which item will be used to represent a disabled feature."));
         cch.writeFile();
     }
