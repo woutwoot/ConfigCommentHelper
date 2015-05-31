@@ -1,0 +1,57 @@
+plugin:
+  tag: '&4[IFS]: &e'
+  logging: true
+  checkForUpdate: true
+  synchronizeShops: false
+  keepShopMenuOpen: false
+prices:
+  priceMultiplier: 1.0
+  sellFactor: 0.8
+  defaultPrice: 20.0
+  discountPercent32: 2
+  discountPercent64: 4
+misc: 'Just trying to trick you!'
+inventory:
+Also, just for testing, this is a new line.
+  # Contains all sorts of settings concerning the shop menu (inventory)
+  # Also, just for testing, this is a new line.
+  misc:
+    shopMenuTitle: default
+    show3264forUnstackable: true
+    useItemAsIcon: 'false'
+    shopIconsMaterial: GOLD_INGOT
+    # Change this to change which item will be used to represent a disabled feature.
+    disabledIconMaterial: BARRIER
+    disableSellAll: true
+    hideDisabledItem: true
+  buy:
+    nameBuy1: Buy 1
+    nameBuy32: Buy 32
+    nameBuy64: Buy 64
+    loreBuy1: 'Buy just 1 from this shop;&6Price: {price}'
+    loreBuy32: 'Buy half a stack from this shop;&6Price: {price}'
+    loreBuy64: 'Buy a stack from this shop;&6Price: {price}'
+    loreDiscount32: 'Buy half a stack from this shop;&6Price: {price};&a- {discount}%
+      discount;&6Total: {total}'
+    loreDiscount64: 'Buy a stack from this shop;&6Price: {price};&a- {discount}% discount;&6Total:
+      {total}'
+  sell:
+    nameSell1: Sell 1
+    nameSell32: Sell 32
+    nameSell64: Sell 64
+    loreSell1: 'Sell just 1 to this shop;&6Price: {price}'
+    loreSell32: 'Sell half a stack to this shop;&6Price: {price}'
+    loreSell64: 'Sell a stack to this shop;&6Price: {price}'
+  disabled:
+    nameDisabled: '&4DISABLED'
+    loreDisabled: This feature is disabled for this shop.
+  layout:
+    sell1slot: 8
+    sell32slot: 17
+    sell64slot: 26
+    sellAllSlot: 16
+    buy1slot: 0
+    buy32slot: 9
+    buy64slot: 18
+    previewSlot: 13
+    inventorySize: 27
