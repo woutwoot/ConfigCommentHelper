@@ -12,7 +12,6 @@ prices:
   discountPercent64: 4
 misc: 'Just trying to trick you!'
 inventory:
-Also, just for testing, this is a new line.
   # Contains all sorts of settings concerning the shop menu (inventory)
   # Also, just for testing, this is a new line.
   misc:
