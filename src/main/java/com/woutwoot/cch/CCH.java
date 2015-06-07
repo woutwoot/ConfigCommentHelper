@@ -1,6 +1,7 @@
 package com.woutwoot.cch;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,20 +19,43 @@ public class CCH {
     }
 
     /**
+     * Adds a header to a YML config file.
+     */
+    public void addHeader(String... header) {
+        String[] headerLines = getLines(header);
+        for (int i = headerLines.length - 1; i >= 0; i--) {
+            lines.add(0, "#" + headerLines[i]);
+        }
+    }
+
+    /**
      * Adds a comment to a YML config file.
      */
     public boolean addComment(String path, String... comment) {
         int level = path.split("\\.").length;
         int line = getSectionLine(path);
+        String[] commentLines = getLines(comment);
         if (line != -1) {
             String pre = getPrefix(level) + "# ";
-            for (int i = 0; i < comment.length; i++)
-                insertLine(line + i, pre + comment[i]);
+            for (int i = 0; i < commentLines.length; i++)
+                insertLine(line + i, pre + commentLines[i]);
         } else {
             return false;
         }
         writeFile();
         return true;
+    }
+
+    /**
+     * Extracts all lines out of an array of strings. This will split on \n
+     * @return String array with all lines separated
+     */
+    private String[] getLines(String[] strings){
+        List<String> lines = new LinkedList<>();
+        for(String s : strings){
+            lines.addAll(Arrays.asList(s.split("\n")));
+        }
+        return lines.toArray(new String[lines.size()]);
     }
 
     /**

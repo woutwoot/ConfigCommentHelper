@@ -1,3 +1,7 @@
+#This is a test header
+#This is the second header line.
+#This is the third header line.
+#This is the fourth line.
 plugin:
   tag: '&4[IFS]: &e'
   logging: true

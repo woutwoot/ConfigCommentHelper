@@ -17,8 +17,9 @@ public class TestCCH {
     public void testAddComment(){
         CCH cch = new CCH(file);
         cch.readFile();
-        assertTrue(cch.addComment("inventory.misc", "Contains all sorts of settings concerning the shop menu (inventory)", "Also, just for testing, this is a new line."));
+        assertTrue(cch.addComment("inventory.misc", "Contains all sorts of settings concerning the shop menu (inventory)\nAlso, just for testing, this is a new line."));
         assertTrue(cch.addComment("inventory.misc.disabledIconMaterial", "Change this to change which item will be used to represent a disabled feature."));
+        cch.addHeader("This is a test header", "This is the second header line.", "This is the third header line.\nThis is the fourth line.");
         cch.writeFile();
     }
 
